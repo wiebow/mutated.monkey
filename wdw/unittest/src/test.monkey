@@ -41,6 +41,13 @@ Class Test Abstract
 	Method TearDown:Void()
 	End
 	
+	#rem
+		'summary: This method registers all your unit tests.
+		'This method is called when this test is registered to the suite.
+	#end
+	Method RegisterTests:Void() Abstract
+	
+	
 		
 	
 	'summary: Runs all registered unit tests.
@@ -73,6 +80,9 @@ Class Test Abstract
 	Method TestName:Void( n:String ) Property
 		testName = n
 	End
+	
+
+		
 
 		
 	'summary: Registers a unit test to this test.

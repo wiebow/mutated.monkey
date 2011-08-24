@@ -29,6 +29,10 @@ Class TestSuite
 	Method RegisterTest:Void(t:Test)
 		if tests.Contains(t) = False
 			tests.AddLast(t)
+			
+			'fill it with your unit tests
+			t.RegisterTests()
+			
 		EndIf
 	End
 	

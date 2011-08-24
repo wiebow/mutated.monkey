@@ -296,21 +296,23 @@ bb_testsuite_TestSuite.prototype.bbm_RegisterTest=function(bbt_t){
 	if(this.bb_tests.bbm_Contains(bbt_t)==false){
 		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<31>";
 		this.bb_tests.bbm_AddLast(bbt_t);
+		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<34>";
+		bbt_t.bbm_RegisterTests();
 	}
 	pop_err();
 }
 bb_testsuite_TestSuite.prototype.bbm_Run=function(){
 	push_err();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<40>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<44>";
 	print("Starting Test Suite...");
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<42>";
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<42>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<46>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<46>";
 	var bbt_=this.bb_tests.bbm_ObjectEnumerator();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<42>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<46>";
 	while(bbt_.bbm_HasNext()){
-		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<42>";
+		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<46>";
 		var bbt_t=bbt_.bbm_NextObject();
-		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<43>";
+		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/testsuite.monkey<47>";
 		bbt_t.bbm_Run();
 	}
 	pop_err();
@@ -329,22 +331,18 @@ function bb_test_new(){
 }
 bb_test_Test.prototype.bbm_TestName=function(){
 	push_err();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<68>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<75>";
 	pop_err();
 	return this.bb_testName;
 }
 bb_test_Test.prototype.bbm_TestName2=function(bbt_n){
 	push_err();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<74>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<81>";
 	this.bb_testName=bbt_n;
 	pop_err();
 }
-bb_test_Test.prototype.bbm_RegisterUnitTest=function(bbt_u){
+bb_test_Test.prototype.bbm_RegisterTests=function(){
 	push_err();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<80>";
-	this.bb_units.bbm_AddLast(bbt_u);
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<81>";
-	bbt_u.bbm_RegisterOwner(this);
 	pop_err();
 }
 bb_test_Test.prototype.bbm_SetUp=function(){
@@ -357,31 +355,39 @@ bb_test_Test.prototype.bbm_TearDown=function(){
 }
 bb_test_Test.prototype.bbm_Run=function(){
 	push_err();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<49>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<56>";
 	print("-Starting Test '"+this.bb_testName+"' containing "+String(this.bb_units.bbm_Count())+" unit tests.");
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<51>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<58>";
 	var bbt_runnedTests=0;
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<52>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<59>";
 	var bbt_testResults="";
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<53>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<60>";
 	var bbt_currentStatus="";
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<55>";
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<55>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<62>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<62>";
 	var bbt_=this.bb_units.bbm_ObjectEnumerator();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<55>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<62>";
 	while(bbt_.bbm_HasNext()){
-		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<55>";
+		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<62>";
 		var bbt_u=bbt_.bbm_NextObject();
-		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<56>";
+		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<63>";
 		this.bbm_SetUp();
-		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<57>";
+		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<64>";
 		bbt_u.bbm_Run();
-		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<58>";
+		err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<65>";
 		this.bbm_TearDown();
 	}
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<47>";
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<54>";
 	pop_err();
 	return 0;
+}
+bb_test_Test.prototype.bbm_RegisterUnitTest=function(bbt_u){
+	push_err();
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<90>";
+	this.bb_units.bbm_AddLast(bbt_u);
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/test.monkey<91>";
+	bbt_u.bbm_RegisterOwner(this);
+	pop_err();
 }
 function bb_list_List(){
 	Object.call(this);
@@ -458,28 +464,38 @@ function bb_simple_test_DummyTest(){
 bb_simple_test_DummyTest.prototype=extend_class(bb_test_Test);
 function bb_simple_test_new(){
 	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<35>";
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<30>";
 	bb_test_new.call(this);
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<35>";
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<30>";
 	var bbt_=this;
 	pop_err();
 	return bbt_;
 }
+bb_simple_test_DummyTest.prototype.bbm_RegisterTests=function(){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<45>";
+	this.bbm_RegisterUnitTest(bb_simple_test_new3.call(new bb_simple_test_T_Constructor));
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<46>";
+	this.bbm_RegisterUnitTest(bb_simple_test_new4.call(new bb_simple_test_T_Add));
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<47>";
+	this.bbm_RegisterUnitTest(bb_simple_test_new5.call(new bb_simple_test_T_AddFail));
+	pop_err();
+}
 bb_simple_test_DummyTest.prototype.bbm_SetUp=function(){
 	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<50>";
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<53>";
 	this.bb_testObject=bb_simple_test_new6.call(new bb_simple_test_Dummy);
 	pop_err();
 }
 bb_simple_test_DummyTest.prototype.bbm_TearDown=function(){
 	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<55>";
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<58>";
 	this.bb_testObject=null;
 	pop_err();
 }
 bb_simple_test_DummyTest.prototype.bbm_TestObject=function(){
 	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<43>";
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<38>";
 	pop_err();
 	return this.bb_testObject;
 }
@@ -516,107 +532,6 @@ function bb_list_new3(bbt_succ,bbt_pred,bbt_data){
 	var bbt_=this;
 	pop_err();
 	return bbt_;
-}
-function bb_unit_Unit(){
-	Object.call(this);
-	this.bb_owner=null;
-}
-function bb_unit_new(){
-	push_err();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/unit.monkey<38>";
-	var bbt_=this;
-	pop_err();
-	return bbt_;
-}
-bb_unit_Unit.prototype.bbm_RegisterOwner=function(bbt_t){
-	push_err();
-	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/unit.monkey<69>";
-	this.bb_owner=bbt_t;
-	pop_err();
-}
-bb_unit_Unit.prototype.bbm_Run=function(){
-	push_err();
-	pop_err();
-}
-function bb_simple_test_DummyUnit(){
-	bb_unit_Unit.call(this);
-}
-bb_simple_test_DummyUnit.prototype=extend_class(bb_unit_Unit);
-function bb_simple_test_new2(){
-	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<68>";
-	bb_unit_new.call(this);
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<68>";
-	var bbt_=this;
-	pop_err();
-	return bbt_;
-}
-bb_simple_test_DummyUnit.prototype.bbm_DoTest=function(bbt_d){
-	push_err();
-	pop_err();
-}
-bb_simple_test_DummyUnit.prototype.bbm_Run=function(){
-	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<72>";
-	this.bbm_DoTest(object_downcast((this.bb_owner),bb_simple_test_DummyTest).bbm_TestObject());
-	pop_err();
-}
-function bb_simple_test_T_Constructor(){
-	bb_simple_test_DummyUnit.call(this);
-}
-bb_simple_test_T_Constructor.prototype=extend_class(bb_simple_test_DummyUnit);
-function bb_simple_test_new3(){
-	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<77>";
-	bb_simple_test_new2.call(this);
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<77>";
-	var bbt_=this;
-	pop_err();
-	return bbt_;
-}
-bb_simple_test_T_Constructor.prototype.bbm_DoTest=function(bbt_d){
-	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<79>";
-	bb_assert_AssertNotNull((bbt_d),"Object must not be Null.");
-	pop_err();
-}
-function bb_simple_test_T_Add(){
-	bb_simple_test_DummyUnit.call(this);
-}
-bb_simple_test_T_Add.prototype=extend_class(bb_simple_test_DummyUnit);
-function bb_simple_test_new4(){
-	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<84>";
-	bb_simple_test_new2.call(this);
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<84>";
-	var bbt_=this;
-	pop_err();
-	return bbt_;
-}
-bb_simple_test_T_Add.prototype.bbm_DoTest=function(bbt_d){
-	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<86>";
-	bb_assert_AssertEquals(bbt_d.bbm_Add(5,6),11,"Result must be 11.");
-	pop_err();
-}
-function bb_simple_test_T_AddFail(){
-	bb_simple_test_DummyUnit.call(this);
-}
-bb_simple_test_T_AddFail.prototype=extend_class(bb_simple_test_DummyUnit);
-function bb_simple_test_new5(){
-	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<91>";
-	bb_simple_test_new2.call(this);
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<91>";
-	var bbt_=this;
-	pop_err();
-	return bbt_;
-}
-bb_simple_test_T_AddFail.prototype.bbm_DoTest=function(bbt_d){
-	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<93>";
-	bb_assert_AssertEquals(bbt_d.bbm_Add(5,6),12,"Result must be 11.");
-	pop_err();
 }
 function bb_list_Enumerator(){
 	Object.call(this);
@@ -658,6 +573,27 @@ bb_list_Enumerator.prototype.bbm_NextObject=function(){
 	pop_err();
 	return bbt_data;
 }
+function bb_unit_Unit(){
+	Object.call(this);
+	this.bb_owner=null;
+}
+bb_unit_Unit.prototype.bbm_Run=function(){
+	push_err();
+	pop_err();
+}
+function bb_unit_new(){
+	push_err();
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/unit.monkey<38>";
+	var bbt_=this;
+	pop_err();
+	return bbt_;
+}
+bb_unit_Unit.prototype.bbm_RegisterOwner=function(bbt_t){
+	push_err();
+	err_info="D:/Monkey/MonkeyPro44/modules/wdw/unittest/src/unit.monkey<69>";
+	this.bb_owner=bbt_t;
+	pop_err();
+}
 function bbMain(){
 	push_err();
 	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<9>";
@@ -669,30 +605,104 @@ function bbMain(){
 	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<14>";
 	bbt_s.bbm_RegisterTest(bbt_t);
 	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<17>";
-	bbt_t.bbm_RegisterUnitTest(bb_simple_test_new3.call(new bb_simple_test_T_Constructor));
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<18>";
-	bbt_t.bbm_RegisterUnitTest(bb_simple_test_new4.call(new bb_simple_test_T_Add));
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<19>";
-	bbt_t.bbm_RegisterUnitTest(bb_simple_test_new5.call(new bb_simple_test_T_AddFail));
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<22>";
 	bbt_s.bbm_Run();
 	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<6>";
 	pop_err();
 	return 0;
+}
+function bb_simple_test_DummyUnit(){
+	bb_unit_Unit.call(this);
+}
+bb_simple_test_DummyUnit.prototype=extend_class(bb_unit_Unit);
+function bb_simple_test_new2(){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<70>";
+	bb_unit_new.call(this);
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<70>";
+	var bbt_=this;
+	pop_err();
+	return bbt_;
+}
+bb_simple_test_DummyUnit.prototype.bbm_DoTest=function(bbt_d){
+	push_err();
+	pop_err();
+}
+bb_simple_test_DummyUnit.prototype.bbm_Run=function(){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<74>";
+	this.bbm_DoTest(object_downcast((this.bb_owner),bb_simple_test_DummyTest).bbm_TestObject());
+	pop_err();
+}
+function bb_simple_test_T_Constructor(){
+	bb_simple_test_DummyUnit.call(this);
+}
+bb_simple_test_T_Constructor.prototype=extend_class(bb_simple_test_DummyUnit);
+function bb_simple_test_new3(){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<79>";
+	bb_simple_test_new2.call(this);
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<79>";
+	var bbt_=this;
+	pop_err();
+	return bbt_;
+}
+bb_simple_test_T_Constructor.prototype.bbm_DoTest=function(bbt_d){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<81>";
+	bb_assert_AssertNotNull((bbt_d),"Object must not be Null.");
+	pop_err();
+}
+function bb_simple_test_T_Add(){
+	bb_simple_test_DummyUnit.call(this);
+}
+bb_simple_test_T_Add.prototype=extend_class(bb_simple_test_DummyUnit);
+function bb_simple_test_new4(){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<86>";
+	bb_simple_test_new2.call(this);
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<86>";
+	var bbt_=this;
+	pop_err();
+	return bbt_;
+}
+bb_simple_test_T_Add.prototype.bbm_DoTest=function(bbt_d){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<88>";
+	bb_assert_AssertEquals(bbt_d.bbm_Add(5,6),11,"Result must be 11.");
+	pop_err();
+}
+function bb_simple_test_T_AddFail(){
+	bb_simple_test_DummyUnit.call(this);
+}
+bb_simple_test_T_AddFail.prototype=extend_class(bb_simple_test_DummyUnit);
+function bb_simple_test_new5(){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<93>";
+	bb_simple_test_new2.call(this);
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<93>";
+	var bbt_=this;
+	pop_err();
+	return bbt_;
+}
+bb_simple_test_T_AddFail.prototype.bbm_DoTest=function(bbt_d){
+	push_err();
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<95>";
+	bb_assert_AssertEquals(bbt_d.bbm_Add(5,6),12,"Result must be 11.");
+	pop_err();
 }
 function bb_simple_test_Dummy(){
 	Object.call(this);
 }
 function bb_simple_test_new6(){
 	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<27>";
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<22>";
 	var bbt_=this;
 	pop_err();
 	return bbt_;
 }
 bb_simple_test_Dummy.prototype.bbm_Add=function(bbt_i1,bbt_i2){
 	push_err();
-	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<29>";
+	err_info="D:/Monkey/MySolutions/mutated-monkey/wdw/unittest/sample/simple_test.monkey<24>";
 	var bbt_=bbt_i1+bbt_i2;
 	pop_err();
 	return bbt_;

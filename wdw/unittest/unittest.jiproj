@@ -4,15 +4,15 @@
     <Document Filename=".\sample\simple_test.monkey" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="155">
       <Bookmarks />
       <CursorPos>
-        <X>23</X>
-        <Y>53</Y>
+        <X>26</X>
+        <Y>42</Y>
       </CursorPos>
       <OutLiningSerialization>
         <Folding_Nodes_Collection>
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>22</Y>
+            <Y>17</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
@@ -27,13 +27,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>30</Y>
+            <Y>25</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>11</X>
-            <Y>26</Y>
+            <Y>21</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -42,13 +42,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>29</Y>
+            <Y>24</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>33</X>
-            <Y>27</Y>
+            <Y>22</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -57,13 +57,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>57</Y>
+            <Y>59</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>15</X>
-            <Y>34</Y>
+            <Y>29</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -72,13 +72,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>43</Y>
+            <Y>38</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>26</X>
-            <Y>41</Y>
+            <Y>36</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -87,13 +87,28 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>50</Y>
+            <Y>47</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>1</ASTNestingLevel>
+          <StartPoint>
+            <X>28</X>
+            <Y>43</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>53</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>20</X>
-            <Y>48</Y>
+            <Y>51</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -102,13 +117,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>55</Y>
+            <Y>58</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>23</X>
-            <Y>53</Y>
+            <Y>56</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -117,13 +132,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>73</Y>
+            <Y>75</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>15</X>
-            <Y>67</Y>
+            <Y>69</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -132,13 +147,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>72</Y>
+            <Y>74</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>18</X>
-            <Y>70</Y>
+            <Y>72</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -147,13 +162,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>80</Y>
+            <Y>82</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>19</X>
-            <Y>76</Y>
+            <Y>78</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -162,13 +177,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>79</Y>
+            <Y>81</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>30</X>
-            <Y>77</Y>
+            <Y>79</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -177,13 +192,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>87</Y>
+            <Y>89</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>11</X>
-            <Y>83</Y>
+            <Y>85</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -192,13 +207,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>86</Y>
+            <Y>88</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>30</X>
-            <Y>84</Y>
+            <Y>86</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -207,13 +222,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>94</Y>
+            <Y>96</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>15</X>
-            <Y>90</Y>
+            <Y>92</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -222,13 +237,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>93</Y>
+            <Y>95</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>30</X>
-            <Y>91</Y>
+            <Y>93</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -239,7 +254,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>22</Y>
+            <Y>17</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
@@ -254,13 +269,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>30</Y>
+            <Y>25</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>11</X>
-            <Y>26</Y>
+            <Y>21</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -269,13 +284,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>29</Y>
+            <Y>24</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>33</X>
-            <Y>27</Y>
+            <Y>22</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -284,13 +299,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>57</Y>
+            <Y>59</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>15</X>
-            <Y>34</Y>
+            <Y>29</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -299,13 +314,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>43</Y>
+            <Y>38</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>26</X>
-            <Y>41</Y>
+            <Y>36</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -314,13 +329,28 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>50</Y>
+            <Y>47</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>1</ASTNestingLevel>
+          <StartPoint>
+            <X>28</X>
+            <Y>43</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>53</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>20</X>
-            <Y>48</Y>
+            <Y>51</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -329,13 +359,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>55</Y>
+            <Y>58</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>23</X>
-            <Y>53</Y>
+            <Y>56</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -344,13 +374,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>73</Y>
+            <Y>75</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>15</X>
-            <Y>67</Y>
+            <Y>69</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -359,13 +389,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>72</Y>
+            <Y>74</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>18</X>
-            <Y>70</Y>
+            <Y>72</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -374,13 +404,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>80</Y>
+            <Y>82</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>19</X>
-            <Y>76</Y>
+            <Y>78</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -389,13 +419,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>79</Y>
+            <Y>81</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>30</X>
-            <Y>77</Y>
+            <Y>79</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -404,13 +434,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>87</Y>
+            <Y>89</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>11</X>
-            <Y>83</Y>
+            <Y>85</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -419,13 +449,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>86</Y>
+            <Y>88</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>30</X>
-            <Y>84</Y>
+            <Y>86</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -434,13 +464,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>94</Y>
+            <Y>96</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
           <StartPoint>
             <X>15</X>
-            <Y>90</Y>
+            <Y>92</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -449,13 +479,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>93</Y>
+            <Y>95</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>30</X>
-            <Y>91</Y>
+            <Y>93</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -463,10 +493,11 @@
       </OutLiningSplitSerialization>
       <DocGUID>76578116-ee7a-4a9c-a008-6dff88aee55c</DocGUID>
     </Document>
-    <Document Filename=".\src\assert.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="155">
+    <Document Filename=".\src\assert.monkey" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="155">
+      <Bookmarks />
       <CursorPos>
-        <X>12</X>
-        <Y>90</Y>
+        <X>0</X>
+        <Y>104</Y>
       </CursorPos>
       <OutLiningSerialization>
         <Folding_Nodes_Collection>
@@ -1402,12 +1433,13 @@
           <Expanded>true</Expanded>
         </Folding_Nodes_Collection>
       </OutLiningSplitSerialization>
-      <DocGUID />
+      <DocGUID>fcb3c463-d394-4f6b-97cb-6d2139380dc3</DocGUID>
     </Document>
-    <Document Filename=".\src\test.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="155">
+    <Document Filename=".\src\test.monkey" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="155">
+      <Bookmarks />
       <CursorPos>
         <X>1</X>
-        <Y>44</Y>
+        <Y>82</Y>
       </CursorPos>
       <OutLiningSerialization>
         <Folding_Nodes_Collection>
@@ -1444,7 +1476,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>83</Y>
+            <Y>93</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
@@ -1516,16 +1548,31 @@
           <Expanded>true</Expanded>
         </Folding_Nodes_Collection>
         <Folding_Nodes_Collection>
+          <Collapsed_Text>/**/</Collapsed_Text>
+          <EndPoint>
+            <X>6</X>
+            <Y>46</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>1</ASTNestingLevel>
+          <StartPoint>
+            <X>1</X>
+            <Y>43</Y>
+          </StartPoint>
+          <Text>/**/</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>62</Y>
+            <Y>69</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>17</X>
-            <Y>46</Y>
+            <Y>53</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1534,13 +1581,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>6</X>
-            <Y>58</Y>
+            <Y>65</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>2</ASTNestingLevel>
           <StartPoint>
             <X>11</X>
-            <Y>54</Y>
+            <Y>61</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1549,28 +1596,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>68</Y>
+            <Y>75</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>25</X>
-            <Y>66</Y>
-          </StartPoint>
-          <Text>...</Text>
-          <Expanded>true</Expanded>
-        </Folding_Nodes_Collection>
-        <Folding_Nodes_Collection>
-          <Collapsed_Text>...</Collapsed_Text>
-          <EndPoint>
-            <X>4</X>
-            <Y>74</Y>
-          </EndPoint>
-          <IsEmpty>false</IsEmpty>
-          <ASTNestingLevel>1</ASTNestingLevel>
-          <StartPoint>
-            <X>33</X>
-            <Y>72</Y>
+            <Y>73</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1584,8 +1616,23 @@
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
+            <X>33</X>
+            <Y>79</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>91</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>1</ASTNestingLevel>
+          <StartPoint>
             <X>37</X>
-            <Y>78</Y>
+            <Y>88</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1626,7 +1673,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>83</Y>
+            <Y>93</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
@@ -1698,16 +1745,31 @@
           <Expanded>true</Expanded>
         </Folding_Nodes_Collection>
         <Folding_Nodes_Collection>
+          <Collapsed_Text>/**/</Collapsed_Text>
+          <EndPoint>
+            <X>6</X>
+            <Y>46</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>1</ASTNestingLevel>
+          <StartPoint>
+            <X>1</X>
+            <Y>43</Y>
+          </StartPoint>
+          <Text>/**/</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>62</Y>
+            <Y>69</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>17</X>
-            <Y>46</Y>
+            <Y>53</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1716,13 +1778,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>6</X>
-            <Y>58</Y>
+            <Y>65</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>2</ASTNestingLevel>
           <StartPoint>
             <X>11</X>
-            <Y>54</Y>
+            <Y>61</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1731,28 +1793,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>68</Y>
+            <Y>75</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>25</X>
-            <Y>66</Y>
-          </StartPoint>
-          <Text>...</Text>
-          <Expanded>true</Expanded>
-        </Folding_Nodes_Collection>
-        <Folding_Nodes_Collection>
-          <Collapsed_Text>...</Collapsed_Text>
-          <EndPoint>
-            <X>4</X>
-            <Y>74</Y>
-          </EndPoint>
-          <IsEmpty>false</IsEmpty>
-          <ASTNestingLevel>1</ASTNestingLevel>
-          <StartPoint>
-            <X>33</X>
-            <Y>72</Y>
+            <Y>73</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1766,19 +1813,35 @@
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
+            <X>33</X>
+            <Y>79</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>91</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>1</ASTNestingLevel>
+          <StartPoint>
             <X>37</X>
-            <Y>78</Y>
+            <Y>88</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
         </Folding_Nodes_Collection>
       </OutLiningSplitSerialization>
-      <DocGUID />
+      <DocGUID>47e002d4-75d1-43f5-bed9-304ba4851c08</DocGUID>
     </Document>
-    <Document Filename=".\src\testsuite.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="155">
+    <Document Filename=".\src\testsuite.monkey" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="155">
+      <Bookmarks />
       <CursorPos>
-        <X>20</X>
-        <Y>15</Y>
+        <X>0</X>
+        <Y>32</Y>
       </CursorPos>
       <OutLiningSerialization>
         <Folding_Nodes_Collection>
@@ -1800,7 +1863,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>46</Y>
+            <Y>50</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
@@ -1830,7 +1893,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>32</Y>
+            <Y>36</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
@@ -1845,7 +1908,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>7</X>
-            <Y>31</Y>
+            <Y>35</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>2</ASTNestingLevel>
@@ -1860,13 +1923,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>44</Y>
+            <Y>48</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>18</X>
-            <Y>37</Y>
+            <Y>41</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1875,13 +1938,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>6</X>
-            <Y>43</Y>
+            <Y>47</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>2</ASTNestingLevel>
           <StartPoint>
             <X>11</X>
-            <Y>41</Y>
+            <Y>45</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1907,7 +1970,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>3</X>
-            <Y>46</Y>
+            <Y>50</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>0</ASTNestingLevel>
@@ -1937,7 +2000,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>32</Y>
+            <Y>36</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
@@ -1952,7 +2015,7 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>7</X>
-            <Y>31</Y>
+            <Y>35</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>2</ASTNestingLevel>
@@ -1967,13 +2030,13 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>4</X>
-            <Y>44</Y>
+            <Y>48</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>1</ASTNestingLevel>
           <StartPoint>
             <X>18</X>
-            <Y>37</Y>
+            <Y>41</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
@@ -1982,19 +2045,19 @@
           <Collapsed_Text>...</Collapsed_Text>
           <EndPoint>
             <X>6</X>
-            <Y>43</Y>
+            <Y>47</Y>
           </EndPoint>
           <IsEmpty>false</IsEmpty>
           <ASTNestingLevel>2</ASTNestingLevel>
           <StartPoint>
             <X>11</X>
-            <Y>41</Y>
+            <Y>45</Y>
           </StartPoint>
           <Text>...</Text>
           <Expanded>true</Expanded>
         </Folding_Nodes_Collection>
       </OutLiningSplitSerialization>
-      <DocGUID />
+      <DocGUID>e6a91d51-6159-4f6a-9465-f25f5ee9a870</DocGUID>
     </Document>
     <Document Filename=".\src\unit.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="155">
       <CursorPos>

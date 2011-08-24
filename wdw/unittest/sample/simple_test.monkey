@@ -12,11 +12,6 @@ Function Main:Int()
 	Local t:DummyTest = New DummyTest
 	t.TestName = "Dummy Test"
 	s.RegisterTest(t)
-
-	'register unit tests
-	t.RegisterUnitTest(New T_Constructor)
-	t.RegisterUnitTest(New T_Add)
-	t.RegisterUnitTest(New T_AddFail)
 	
 	'run the tests in the suite
 	s.Run()	
@@ -43,7 +38,15 @@ Class DummyTest extends Test
 		Return testObject
 	End
 	
-		
+	
+	'register unit tests in the test	
+	'is called when the test is added to the suite
+	Method RegisterTests:Void()
+		RegisterUnitTest(New T_Constructor)
+		RegisterUnitTest(New T_Add)
+		RegisterUnitTest(New T_AddFail)		
+	End
+			
 	
 	'override
 	Method SetUp:Void()
@@ -54,7 +57,6 @@ Class DummyTest extends Test
 	Method TearDown:Void()
 		testObject = Null
 	End
-	
 End
 
 
