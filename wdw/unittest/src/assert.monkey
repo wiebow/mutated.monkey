@@ -7,7 +7,6 @@ Strict
 
 Private
 
-Const DEFAULT_ERROR:String = "Assert Failed!"
 
 Function AssertError:Void(msg:String)
 	Print(msg)
@@ -16,9 +15,9 @@ End
 
 Public
 
-Function AssertTrue:Bool(b:Bool, message:String = DEFAULT_ERROR)
+Function AssertTrue:Bool(b:Bool)
 	#If CONFIG = "debug"
-		If b = False Then AssertError( "AssertTrue: " + message )
+		If b = False Then AssertError( "AssertTrue Failed.")
 	#End
 	
 	If b = False Then Return False
@@ -29,7 +28,7 @@ End
 
 Function AssertFalse:Bool(b:Bool, message:String = DEFAULT_ERROR)
 	#If CONFIG = "debug"
-		If b = True Then AssertError( "AssertFalse: " + message )	
+		If b = True Then AssertError( "AssertFalse Failed." )	
 	#End
 	
 	If b = True Then Return False
@@ -38,9 +37,11 @@ End
 
 
 
-Function AssertEquals:Bool( value:Int, expected:Int, message:String = DEFAULT_ERROR )
+Function AssertEquals:Bool( value:Int, expected:Int)
 	#If CONFIG = "debug"
-		If (value <> expected ) Then AssertError( "Int AssertEquals: " + message )
+		If (value <> expected ) Then
+			AssertError( "Int AssertEquals Failed: actual=" + value + ", expected=" + expected + ".")
+		End
 	#End
 	
 	If (value <> expected ) Then Return False
@@ -49,9 +50,11 @@ End
 
 
 
-Function AssertEquals:Bool( value:Float, expected:Float, message:String = DEFAULT_ERROR )
+Function AssertEquals:Bool( value:Float, expected:Float)
 	#If CONFIG = "debug"
-		If (value <> expected ) Then AssertError( "Float AssertEquals: " + message )
+		If (value <> expected ) Then
+			AssertError( "Float AssertEquals Failed: actual=" + value + ", expected=" + expected + ".")
+		End
 	#End
 	
 	If (value <> expected ) Then Return False
@@ -60,9 +63,9 @@ End
 
 
 
-Function AssertEquals:Bool( value:Object, expected:Object, message:String = DEFAULT_ERROR)
+Function AssertEquals:Bool( value:Object, expected:Object)
 	#If CONFIG = "debug"
-		If (value <> expected ) Then AssertError( "Object AssertEquals: " + message )
+		If (value <> expected ) Then AssertError( "Object AssertEquals Failed. " )
 	#End
 	
 	If (value <> expected ) Then Return False
@@ -71,9 +74,11 @@ End
 
 
 
-Function AssertEquals:Bool( value:String, expected:String, message:String = DEFAULT_ERROR)
+Function AssertEquals:Bool( value:String, expected:String)
 	#If CONFIG = "debug"
-		If (value <> expected ) Then AssertError( "String AssertEquals: " + message )
+		If (value <> expected ) Then
+			AssertError( "Float AssertEquals Failed: actual=" + value + ", expected=" + expected + ".")
+		End	
 	#End
 	
 	If (value <> expected ) Then Return False
@@ -82,9 +87,9 @@ End
 
 
 
-Function AssertSame:Bool( o1:Object, o2:Object, message:String = DEFAULT_ERROR)
+Function AssertSame:Bool( o1:Object, o2:Object)
 	#If CONFIG = "debug"
-		If (o1 <> o2 ) Then AssertError( "Object AssertSame: " + message )		
+		If (o1 <> o2 ) Then AssertError( "Object AssertSame: Objects are not the same." )		
 	#End
 	
 	If (o1 <> o2 ) Then Return False
@@ -93,9 +98,9 @@ End
 
 
 
-Function AssertNotSame:Bool( o1:Object, o2:Object, message:String = DEFAULT_ERROR)
+Function AssertNotSame:Bool( o1:Object, o2:Object)
 	#If CONFIG = "debug"
-		If (o1 = o2 ) Then AssertError( "Object AssertNotSame: " + message )		
+		If (o1 = o2 ) Then AssertError( "Object AssertNotSame: Objects are the same." + message )		
 	#End
 	
 	If (o1 = o2 ) Then Return False
@@ -104,9 +109,9 @@ End
 
 
 
-Function AssertNull:Bool( o:Object, message:String = DEFAULT_ERROR)
+Function AssertNull:Bool( o:Object)
 	#If CONFIG = "debug"
-		If o <> Null Then AssertError( "Object AssertNull: " + message )
+		If o <> Null Then AssertError( "Object AssertNull: Object is not Null.")
 	#End
 
 	If o <> Null Then Return False
@@ -115,9 +120,9 @@ End
 
 
 
-Function AssertNotNull:Bool( o:Object, message:String = DEFAULT_ERROR)
+Function AssertNotNull:Bool( o:Object)
 	#If CONFIG = "debug"
-		If o = Null Then AssertError( "Object AssertNotNull: " + message )
+		If o = Null Then AssertError( "Object AssertNotNull: Object is Null" )
 	#End
 	
 	If o = Null Then Return False

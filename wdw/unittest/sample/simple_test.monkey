@@ -85,13 +85,13 @@ End
 'another test
 Class T_Add extends DummyUnit	
 	Method DoTest:Void( d:Dummy )
-		AssertEquals( d.Add( 5, 6 ), 11, "Result must be 11." )		
+		AssertEquals( d.Add( 5, 2 ), 11)
 	End
 End
 
 'this test fails
 Class T_AddFail extends DummyUnit	
 	Method DoTest:Void( d:Dummy )
-		AssertEquals( d.Add( 5, 6 ), 12, "Result must be 11." )		
+		AssertEquals( d.Add( 5, 6 ), 12)
 	End
 End
