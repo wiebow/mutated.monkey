@@ -53,7 +53,7 @@ Class Test Abstract
 	'summary: Runs all registered unit tests.
 	Method Run:Int()
 	
-		Print( "-Starting Test '" + testName + "' containing " + units.Count() + " unit tests." )
+		Print( "Starting Test '" + testName + "' containing " + units.Count() + " unit tests." )
 
 		Local runnedTests:Int = 0
 		Local testResults:String = ""
@@ -80,8 +80,6 @@ Class Test Abstract
 	Method TestName:Void( n:String ) Property
 		testName = n
 	End
-	
-
 		
 
 		

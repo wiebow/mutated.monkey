@@ -77,21 +77,22 @@ End
 
 'a test
 Class T_Constructor extends DummyUnit
-	Method DoTest:Void( d:Dummy )
-		AssertNotNull( d, "Object must not be Null." )
+	Method DoTest:Void( d:Dummy )	
+		'pass a string as well to identify the test in case it fails.
+		AssertNotNull( d, "Constructor" )
 	End	
 End
 
 'another test
 Class T_Add extends DummyUnit	
 	Method DoTest:Void( d:Dummy )
-		AssertEquals( d.Add( 5, 2 ), 11)
+		AssertEqualsI( d.Add( 5, 6 ), 11, "Add")
 	End
 End
 
 'this test fails
 Class T_AddFail extends DummyUnit	
 	Method DoTest:Void( d:Dummy )
-		AssertEquals( d.Add( 5, 6 ), 12)
+		AssertEqualsI( d.Add( 5, 6 ), 12, "Add 2")
 	End
 End
