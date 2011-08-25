@@ -37,7 +37,7 @@ End
 
 
 
-Function AssertEquals:Bool( value:Int, expected:Int)
+Function AssertEquals:Bool( expected:Int, value:Int)
 	#If CONFIG = "debug"
 		If (value <> expected ) Then
 			AssertError( "Int AssertEquals Failed: actual=" + value + ", expected=" + expected + ".")
@@ -50,7 +50,7 @@ End
 
 
 
-Function AssertEquals:Bool( value:Float, expected:Float)
+Function AssertEquals:Bool(expected:Float, value:Float)
 	#If CONFIG = "debug"
 		If (value <> expected ) Then
 			AssertError( "Float AssertEquals Failed: actual=" + value + ", expected=" + expected + ".")
@@ -63,7 +63,7 @@ End
 
 
 
-Function AssertEquals:Bool( value:Object, expected:Object)
+Function AssertEquals:Bool(expected:Object, value:Object)
 	#If CONFIG = "debug"
 		If (value <> expected ) Then AssertError( "Object AssertEquals Failed. " )
 	#End
@@ -74,7 +74,7 @@ End
 
 
 
-Function AssertEquals:Bool( value:String, expected:String)
+Function AssertEquals:Bool(expected:String, value:String)
 	#If CONFIG = "debug"
 		If (value <> expected ) Then
 			AssertError( "Float AssertEquals Failed: actual=" + value + ", expected=" + expected + ".")
