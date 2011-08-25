@@ -7,7 +7,6 @@ Strict
 
 Private
 
-
 Function AssertError:Void(msg:String)
 	Print(msg)
 	Error(msg)
@@ -51,8 +50,12 @@ End
 
 
 Function AssertEquals:Bool(expected:Float, value:Float)
+
+	Local approx:Float = 0.00001
+
 	#If CONFIG = "debug"
-		If (value <> expected ) Then
+		If (value - expected) > approx 
+'		If (value <> expected ) Then
 			AssertError( "Float AssertEquals Failed: actual=" + value + ", expected=" + expected + ".")
 		End
 	#End
