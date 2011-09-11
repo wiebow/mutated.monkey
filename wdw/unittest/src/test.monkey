@@ -26,6 +26,13 @@ Class Test Abstract
 	Field units:List<Unit> = New List<Unit>
 	
 	Public
+	
+	
+	'summary: default constructor
+	Method New( name:String )
+		testName = name
+	End
+		
 
 	#rem
 		summary: Optional to override to fit your test scenario.
@@ -46,12 +53,10 @@ Class Test Abstract
 		'This method is called when this test is registered to the suite.
 	#end
 	Method RegisterTests:Void() Abstract
-	
-	
 		
-	
+		
 	'summary: Runs all registered unit tests.
-	Method Run:Int()
+	Method Run:Void()
 	
 		Print( "Starting Test '" + testName + "' containing " + units.Count() + " unit tests." )
 
@@ -67,6 +72,7 @@ Class Test Abstract
 				
 		'show test results
 		' ..
+'		Return Null
 	End
 	
 	
@@ -80,8 +86,7 @@ Class Test Abstract
 	Method TestName:Void( n:String ) Property
 		testName = n
 	End
-		
-
+	
 		
 	'summary: Registers a unit test to this test.
 	Method RegisterUnitTest:Void(u:Unit)

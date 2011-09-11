@@ -9,7 +9,7 @@ Function Main:Int()
 	Local s:TestSuite = new TestSuite
 	
 	'create a new test and register it in the suite
-	Local t:DummyTest = New DummyTest
+	local t:= New DummyTest
 	t.TestName = "Dummy Test"
 	s.RegisterTest(t)
 	
