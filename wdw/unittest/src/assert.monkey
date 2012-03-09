@@ -1,127 +1,117 @@
 
-'a couple of simple assert functions
-'return true/false in release mode
-'halts program when in debug mode
-
 Strict
 
-Private
+Import testbase
 
-Const DEFAULT_ERROR:String ="Assert"
+#rem
+summary: A set of assert methods.
+A message is printed when an assertion fails.
+A runtime error is also created when debug is enabled.
+#end
+Class Assert
 
-Function AssertError:Void(msg:String)
-	Print(msg)
-	Error(msg)
-End
+	'summary: Creates an error message and halts the program when in debug mode.
+	Method Fail:Void(message:string)
+		Print("! Failed: " + message)
+		
+		#If CONFIG = "DEBUG"
+			Error("! Failed: " + message)
+		#End
+	End Method
 
-Public
-
-Function AssertTrue:Bool(b:Bool, message:String = DEFAULT_ERROR)
-	#If CONFIG = "debug"
-		If b = False Then AssertError( message + " failed. AssertTrue Failed.")
-	#End
 	
-	If b = False Then Return False
-	Return True
-End
-
-
-
-Function AssertFalse:Bool(b:Bool, message:String = DEFAULT_ERROR)
-	#If CONFIG = "debug"
-		If b = True Then AssertError( message + " failed. AssertFalse Failed." )	
-	#End
+		
+	'summary: Asserts that a condition is true.
+	Method assertTrue:Bool(b:Bool, message:String = "")
+		If b = False
+			Fail("assertTrue() : " + message)
+			Return False
+		EndIf
+		Return true
+	End
 	
-	If b = True Then Return False
-	Return True
-End
-
-
-
-Function AssertEqualsI:Bool( expected:Int, value:Int, message:String = DEFAULT_ERROR)
-	#If CONFIG = "debug"
-		If (value <> expected ) Then
-			AssertError( message + " failed. expected: " + expected + ", actual: " + value + ".")
+	
+	
+	'summary: Asserts that a condition is false.
+	Method assertFalse:Bool(b:Bool, message:String = "")
+		if b = True
+			Fail("assertFalse() : " + message)
+			Return False
 		End
-	#End
+		Return True
+	End	
 	
-	If (value <> expected ) Then Return False
-	Return True	
-End
+	
 
+	'summary: Asserts that two objects are equal.
+	Method assertEquals:Bool(expected:String, actual:String, message:String = "")
+'		If expected = Null And actual = Null Then Return
+		If expected = actual Then Return True
+		
+		Fail("assertEquals() failed. Expected: " + expected + ", actual: " + actual + ". " + message)
+		Return False
+	End
 
-
-Function AssertEqualsF:Bool(expected:Float, value:Float, message:String = DEFAULT_ERROR)
-
-	'some tolerance for float comparison
-	Local approx:Float = 0.00001
-
-	#If CONFIG = "debug"
-		If Abs(value - expected) > approx 
-			AssertError( message + " failed. expected: " + expected + ", actual: " + value + ".")
+	
+	
+	'summary: Asserts that two ints are equal.
+	Method assertEquals:Bool(expected:Int, actual:Int, message:String = "")
+		If expected = actual Then Return True
+		
+		Fail("assertEquals() failed. Expected: " + expected + ", actual: " + actual + ". " + message)
+		Return False
+	End
+	
+	
+	
+	'summary: Asserts that two floats are equal.
+	Method assertEquals:Bool(expected:Float, actual:Float, message:String = "")
+		If expected = actual Then Return True
+		
+		Fail("assertEquals() failed. Expected: " + expected + ", actual: " + actual + ". " + message)
+		Return False
+	End
+	
+	
+	
+	'summary: Asserts that an object is not null.
+	Method assertNotNull:Bool(obj:Object, message:String = "")
+		If Not obj
+			Fail("assertNotNull() failed. " + message)
+			Return False
 		End
-	#End
+		Return True
+	End
 	
-	If Abs(value - expected) < approx Then Return False
-	Return True		
-End
-
-
-
-
-Function AssertEqualsS:Bool(expected:String, value:String, message:String = DEFAULT_ERROR)
-	#If CONFIG = "debug"
-		If value <> expected
-			AssertError( message + " failed. expected: " + expected + ", actual: " + value + ".")
-		End	
-	#End
 	
-	If (value <> expected ) Then Return False
-	Return True		
-End
-
-
-
-Function AssertSame:Bool( o1:Object, o2:Object, message:String = DEFAULT_ERROR)
-	#If CONFIG = "debug"
-		If o1 <> o2
-			AssertError( message + " failed. Objects are not the same.")	
+	
+	'summary: Asserts that an object is null.
+	Method assertNull:Bool(obj:Object, message:String = "")
+		If obj
+			Fail("assertNull() failed. " + message)
+			Return False
 		End
-	#End
+		Return True
+	End
 	
-	If (o1 <> o2 ) Then Return False
-	Return True
-End
-
-
-
-Function AssertNotSame:Bool( o1:Object, o2:Object, message:String = DEFAULT_ERROR)
-	#If CONFIG = "debug"
-		If (o1 = o2 ) Then AssertError( message + " failed. Objects are the same.")
-	#End
 	
-	If (o1 = o2 ) Then Return False
-	Return True
-End
-
-
-
-Function AssertNull:Bool( o:Object, message:String = DEFAULT_ERROR)
-	#If CONFIG = "debug"
-		If o <> Null Then AssertError( message + " failed. Object is not Null.")
-	#End
-
-	If o <> Null Then Return False
-	Return True 	
-End
-
-
-
-Function AssertNotNull:Bool( o:Object, message:String = DEFAULT_ERROR)
-	#If CONFIG = "debug"
-		If o = Null Then AssertError( message + " failed. Object is Null" )
-	#End
 	
-	If o = Null Then Return False
-	Return True 	
-End
+	'summary: Asserts that two objects refer to the same object.
+	Method assertSame:Bool(expected:Object, actual:Object, message:String = "")
+		If expected = actual Then Return True
+		Fail("assertSame() failed. " + message)
+		Return False
+	End
+	
+	
+	
+	'summary: Asserts that two objects refer different objects.
+	Method assertNotSame:Bool(expected:Object, actual:Object, message:String = "")
+		If expected = actual
+			Fail("assertNotSame() failed. " + message)
+			Return False
+		End
+		Return True
+	End
+	
+End Class
