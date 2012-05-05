@@ -5,14 +5,15 @@ Strict
 
 Import wdw.unittest
 
+
 Function Main:Int()
-	Local t:TestSuite = New TestSuite
+	Local t:= New TestSuite
 	t.Run()
 	Return 0
 End
 
 
-Class MyClassTest Extends TestBase
+Class MyClassTest Extends Test
 	
 	Field m:MyClass
 
@@ -28,12 +29,14 @@ Class MyClassTest Extends TestBase
 	End
 	
 	
+	'this test will pass
 	Method constructorTest:Void()
-		Self.assertNotNull(m)
+		assertNotNull(m)
 	End	
-		
+	
+	'this test will fail
 	Method constructortwoTest:Void()
-		Self.assertNull(m)
+		assertNull(m)
 	End
 	
 End

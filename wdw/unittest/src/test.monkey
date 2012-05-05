@@ -17,7 +17,7 @@ For each test method you want to run, end the name with [i]Test[/i].
 
 Any methods not using this naming scheme are ignored.
 #end
-Class TestBase Extends Assert
+Class Test Extends Assert
 
 	'summary: Unit tests for this test class.
 	Field tests:= New List<TestFunction>

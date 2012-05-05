@@ -3,7 +3,7 @@ Strict
 
 Import reflection
 Import testfunction
-Import testbase
+Import test
 
 #Rem
 summary: A test suite defines the fixture to run multiple tests.
@@ -11,8 +11,8 @@ summary: A test suite defines the fixture to run multiple tests.
 Class TestSuite Extends Assert
 
 	'summary: instances of derived test classes go here
-	Field tests:= New List<Object>
-	
+	Field tests := New List <Object>
+		
 	'summary: the current unit test
 	Field currentTest:TestFunction
 
@@ -29,9 +29,9 @@ Class TestSuite Extends Assert
 		Print("* Starting testsuite containing " + tests.Count() + " tests.")
 		Print("")
 		
-		For Local testClass:= EachIn tests
-	
-			Local thisClass:= TestBase(testClass)
+		For Local testClass := EachIn tests
+			
+			Local thisClass := Test(testClass)
 			If Not thisClass Then Error("no class")
 
 			Local size:Int = thisClass.tests.Count()
@@ -46,8 +46,8 @@ Class TestSuite Extends Assert
 				If count = 0 Then doBefore = True
 				If count = size - 1 Then doAfter = True
 				PerformTest(t, doBefore, doAfter)
+				count += 1
 				
-				count+=1
 			Next
 		Next
 
@@ -62,7 +62,7 @@ Class TestSuite Extends Assert
 	Method PerformTest:Void(t:TestFunction, first:Int, last:Int)
 
 		currentTest = t
-		Local c:= TestBase(t.instance)		
+		Local c:= Test(t.instance)		
 
 		'first unit test in this class test?
 		If first
@@ -70,7 +70,7 @@ Class TestSuite Extends Assert
 		End
 		
 		'run the Before method
-		If TestBase(t.instance).before
+		If Test(t.instance).before
 			c.before.Invoke(t.instance, [])
 		End
 		
@@ -98,7 +98,7 @@ Class TestSuite Extends Assert
 			'weed out the non test classes
 			If Not cl.Name().EndsWith("Test") Then Continue
 
-			If cl.ExtendsClass(GetClass("TestBase"))
+			If cl.ExtendsClass(GetClass("Test"))
 
 				'create instance of this class and add it to the tests list				
 				Local o:= cl.NewInstance()
@@ -141,11 +141,11 @@ Class TestSuite Extends Assert
 		
 	'summary: Adds a unittest function to specified instance.
 	Method Add:TestFunction(instance:Object, f:MethodInfo )
-		Local t:= New TestFunction
+		Local t := New TestFunction
 		t.name = "" + GetClass(instance).Name() + "." + f.Name()
 		t.instance = instance
 		t.test = f
-		TestBase(instance).tests.AddLast(t)
+		Test(instance).tests.AddLast(t)
 		Return t
 	End Method
 	

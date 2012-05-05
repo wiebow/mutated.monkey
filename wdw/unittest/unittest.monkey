@@ -2,6 +2,6 @@
 Strict
 
 Import src.assert
-Import src.testbase
+Import src.test
 Import src.testsuite
 Import src.testfunction

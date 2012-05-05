@@ -1,9 +1,9 @@
 
-'2d vector class
+'2d vector class.
 
 Strict
 
-'summary: A simple 2d vector class
+'summary: A simple 2d vector class.
 Class Vector2D
 	
 	Private
@@ -13,13 +13,13 @@ Class Vector2D
 	
 	Public
 	
-	'summary: creates a new vector with passed values
+	'summary: creates a new vector with passed values.
 	Method New(x:Float, y:Float)
 		_x = x
 		_y = y
 	End	
 	
-	'summary: returns a clone of this vector
+	'summary: returns a clone of this vector.
 	Method Clone:Vector2D()	
 		Local v:= new Vector2D
 		v.x = _x
@@ -27,13 +27,13 @@ Class Vector2D
 		Return v
 	End	
 	
-	'summary: copies the values from passed vector to this vector
+	'summary: copies the values from passed vector to this vector.
 	Method Copy:Void(v:Vector2D)
 		_x = v.x
 		_y = v.y		
 	End	
 	
-	'summary: sets this vector to passed values
+	'summary: sets this vector to passed values.
 	Method Set:Void(x:Float, y:Float)
 		_x = x
 		_y = y
@@ -71,14 +71,14 @@ Class Vector2D
 		_y += v.y
 	End
 	
-	'summary: substracts passed values from this vector
-	Method Substract:Void(x:Float, y:Float)
+	'summary: subtracts passed values from this vector
+	Method Subtract:Void(x:Float, y:Float)
 		_x -= x
 		_y -= y
 	End	
 	
-	'summary: substracts passed vector from this vector
-	Method Substract:Void(v:Vector2D)
+	'summary: subtracts passed vector from this vector
+	Method Subtract:Void(v:Vector2D)
 		_x -= v.x
 		_y -= v.y
 	End
@@ -115,7 +115,7 @@ Class Vector2D
 	End	
 	
 	'summary: make this vector length = 1.0
-	Method Normalise:Void()
+	Method Normalize:Void()
 		Divide( Length() )
 	End
 
@@ -144,7 +144,7 @@ Class Vector2D
 	
 	#rem
 		summary: returns angle of vector rotation.
-		Angle range is 0 to 180:
+		Angle range is -180 to 180:
 [code]
 -135 -90 -45
     \ | /
@@ -157,7 +157,7 @@ Class Vector2D
 		Return ATan2( y, x )
 	End
 	
-	'summary: rotates this vector with passed amount, origin = 0,0
+	'summary: rotates this vector with specified amount, origin = 0,0
 	Method Rotate:Void( theta:Float )
 		Local cos:Float = Cos(theta)	
 		Local sin:Float = Sin(theta)
@@ -167,7 +167,7 @@ Class Vector2D
 		_y = qy
 	End
 
-	'summary: rotates this vector with passed amount around passed vector
+	'summary: rotates this vector with specified amount around passed vector
 	Method Rotate:Void( theta:Float, v:Vector2D )
 		Local cos:Float = Cos(theta)	
 		Local sin:Float = Sin(theta)
@@ -177,6 +177,13 @@ Class Vector2D
 		Local qy:Float = -_x * cos + _y * cos
 		_x = qx + v.x
 		_y = qy + v.y		
+	End
+	
+	
+	
+	'summary: returns a string describing the vector values.	
+	Method toString:String()
+		Return "" + _x + "," + _y
 	End
 
 End
