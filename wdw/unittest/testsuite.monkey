@@ -10,10 +10,10 @@ summary: A test suite defines the fixture to run multiple tests.
 #End
 Class TestSuite Extends Assert
 
-	'summary: instances of derived test classes go here
+	'summary: instances of derived test classes go here.
 	Field tests := New List <Object>
 		
-	'summary: the current unit test
+	'summary: the current unit test.
 	Field currentTest:TestFunction
 
 		
@@ -22,12 +22,10 @@ Class TestSuite Extends Assert
 	The test suite will stop when an error occurs in a unit test.
 	#end
 	Method Run:Void()
-'		local startTime:Int = Millisecs()
 		
 		AddTests()
 		
-		Print("* Starting testsuite containing " + tests.Count() + " tests.")
-		Print("")
+		Print("~n* Starting testsuite containing " + (tests.Count()-1) + " tests.~n")
 		
 		For Local testClass := EachIn tests
 			
@@ -41,7 +39,7 @@ Class TestSuite Extends Assert
 			
 			For Local t:TestFunction = eachin thisClass.tests
 			
-				Print("Test: " + t.name)
+				Print("- " + t.name)
 			
 				If count = 0 Then doBefore = True
 				If count = size - 1 Then doAfter = True
@@ -51,8 +49,7 @@ Class TestSuite Extends Assert
 			Next
 		Next
 
-		Print("* Test suite complete.")
-'		Print("Time taken: " + ((Millisecs() - startTime) / 1000))
+		Print("~n* Test suite complete.")
 	
 	End Method
 	

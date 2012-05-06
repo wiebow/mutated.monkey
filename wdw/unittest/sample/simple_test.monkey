@@ -13,6 +13,7 @@ Function Main:Int()
 End
 
 
+'my unit tests for MyClass.
 Class MyClassTest Extends Test
 	
 	Field m:MyClass
@@ -29,19 +30,19 @@ Class MyClassTest Extends Test
 	End
 	
 	
-	'this test will pass
 	Method constructorTest:Void()
-		assertNotNull(m)
+		assertNotNull(m, "This will pass.")
 	End	
 	
 	'this test will fail
 	Method constructortwoTest:Void()
-		assertNull(m)
+		assertNull(m, "This will fail.")
 	End
 	
 End
 
 
+'the class we want to test.
 Class MyClass
 	
 	Private	

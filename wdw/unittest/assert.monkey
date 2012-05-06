@@ -12,10 +12,10 @@ Class Assert
 
 	'summary: Creates an error message and halts the program when in debug mode.
 	Method Fail:Void(message:string)
-		Print("! Failed: " + message)
+		Print("  * " + message)
 		
 		#If CONFIG = "DEBUG"
-			Error("! Failed: " + message)
+			Error("Failed: " + message)
 		#End
 	End Method
 
