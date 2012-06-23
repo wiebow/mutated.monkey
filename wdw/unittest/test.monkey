@@ -19,6 +19,10 @@ Any methods not using this naming scheme are ignored.
 #end
 Class Test Extends Assert
 
+	Field startTime:Int
+	Field endTime:int
+
+
 	'summary: Unit tests for this test class.
 	Field tests:= New List<TestFunction>
 	
@@ -42,5 +46,6 @@ Class Test Extends Assert
 	
 	'summary: Method to run when ending tests for this class.
 	Field afterClass:MethodInfo
+
 	
 End

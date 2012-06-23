@@ -1,7 +1,9 @@
 
 Strict
 
-#REFLECTION_FILTER="simple_test|reflection|wdw.unittest*"
+'set reflection filter.
+'using *_test will add all files using that suffix
+#REFLECTION_FILTER="*_test|reflection|wdw.unittest*"
 
 Import wdw.unittest
 
@@ -17,8 +19,8 @@ End
 Class MyClassTest Extends Test
 	
 	Field m:MyClass
-
 	
+		
 	Method dothisBefore:Void()
 		'we do this before each unit test
 		m = New MyClass
@@ -29,32 +31,59 @@ Class MyClassTest Extends Test
 		m = Null
 	End
 	
-	
+
+	'the tests	
 	Method constructorTest:Void()
-		assertNotNull(m, "This will pass.")
+		assertNotNull(m, "")
 	End	
 	
-	'this test will fail
+	
+	
 	Method constructortwoTest:Void()
-		assertNull(m, "This will fail.")
+		assertNull(m, "this will fail")
 	End
 	
+	
+	
+	Method BoolTest:Void()
+		m.simplebool = True		
+		assertTrue(m.simplebool, "")
+		assertFalse(m.simplebool, "this will fail")		
+	End Method
+	
+	
+	
+	Method IntEqualsTest:Void()
+		m.simpleint = 10
+		assertEquals(m.simpleint, 10, "")
+		assertEquals(m.simpleint, 12, "this will fail")
+	End Method
+	
+	
+	
+	Method FloatEqualsTest:Void()
+		m.simplefloat = 10.1
+		assertEquals(m.simplefloat, 10.1, "")
+		assertEquals(m.simplefloat, 10.2, "this will fail")
+	End Method
+	
+	
+	
+	Method NotSameTest:Void()
+		Local m2:MyClass = New MyClass
+		assertNotSame(m2, m, "")
+		assertSame(m2, m, "this will fail")	
+	End Method
+		
 End
 
 
 'the class we want to test.
 Class MyClass
 	
-	Private	
-	Field simplefield:Int
-	Public	
-	
-	Method Simplefield:Int(i:Int) Property
-		simplefield = i
-		Return 0
-	End
-	
-	Method Simplefield:Int() Property
-		Return simplefield
-	End
+	Field simpleint:Int
+	Field simplestring:string
+	Field simplebool:Bool
+	Field simplefloat:Float
+		
 End
