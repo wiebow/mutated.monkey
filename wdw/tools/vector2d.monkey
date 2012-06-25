@@ -144,8 +144,8 @@ Class Vector2D
 	End
 	
 	#rem
-		summary: returns angle of vector rotation.
-		Angle range is -180 to 180:
+	summary: returns angle of vector rotation.
+	Angle range is -180 to 180:
 [code]
 -135 -90 -45
     \ | /

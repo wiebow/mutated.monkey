@@ -117,8 +117,8 @@ Class Vector2DTest Extends Test
 		Local v2:= New Vector2D
 		v2.Copy(v)
 		
-		assertEquals(10.0, v2.x, "")
-		assertEquals(20.0, v2.y, "")
+		assertEquals(10.0, v2.x, "1")
+		assertEquals(20.0, v2.y, "2")
 	End
 	
 	
@@ -127,10 +127,10 @@ Class Vector2DTest Extends Test
 		Local v2:= new Vector2D(15,25)
 		v.Swap(v2)
 		
-		assertEquals(15.0, v.x, "")
-		assertEquals(25.0, v.y, "")
-		assertEquals(10.0, v2.x, "")
-		assertEquals(20.0, v2.y, "")
+		assertEquals(15.0, v.x, "1")
+		assertEquals(25.0, v.y, "2")
+		assertEquals(10.0, v2.x, "3")
+		assertEquals(20.0, v2.y, "4")
 	End
 	
 	
@@ -138,8 +138,8 @@ Class Vector2DTest Extends Test
 		v.Set(1,2)
 		v.Multiply(10)
 		
-		assertEquals(10.0, v.x, "")
-		assertEquals(20.0, v.y, "")
+		assertEquals(10.0, v.x, "1")
+		assertEquals(20.0, v.y, "2")
 	End
 	
 	
