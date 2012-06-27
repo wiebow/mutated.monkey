@@ -69,7 +69,12 @@ Class Color
 	Method a:Float() property
 		Return _a
 	End
+    
+    Method a:Void(alpha:Float) Property
+        _a = alpha
+    End
 	
+    
 	
 	'summary: Uses the color and alpha values.
 	Method Use:Void()

@@ -7,12 +7,14 @@ Import wdw.unittest
 Import wdw.tools.bag
 
 
+
 Class BagTest Extends Test
 	
-	Field b:Bag
+	Field b:Bag < Dummy >
+	
 	
 	Method doBefore:Void()
-		b = New Bag
+		b = New Bag<Dummy>
 	End
 	
 	
@@ -81,7 +83,7 @@ Class BagTest Extends Test
 	
 	
 	Method RemoveAllFromTest:Void()
-		Local b2 := New Bag
+		Local b2 := New Bag<Dummy>
 		Local o1 := New Dummy
 		Local o2 := New Dummy
 		b.Add(o1)
@@ -97,7 +99,7 @@ Class BagTest Extends Test
 	
 	
 	Method AddAllFromTest:Void()
-		Local b2 := New Bag
+		Local b2 := New Bag<Dummy>
 		Local o1 := New Dummy
 		b2.Add(o1)
 		Local o2 := New Dummy

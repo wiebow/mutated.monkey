@@ -6,9 +6,11 @@ Strict
 #REFLECTION_FILTER="*_test|reflection|wdw.unittest*"
 
 
-'Import vector2d_test
-'Import color_test
+
+Import vector2d_test
+Import color_test
 Import bag_test
+
 
 
 Function Main:Int()
