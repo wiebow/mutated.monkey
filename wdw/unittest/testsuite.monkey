@@ -114,7 +114,7 @@ Class TestSuite Extends Assert
 			
 		Else
 			Local formatted:String = "OK (" + tests.Count() + " test"
-			If tests.Count() > 1 Then formatted += "s"
+			If tests.Count() > 1 Then formatted += "s)" Else formatted += ")"
 			Print(formatted)			
 		End If
 		
@@ -252,6 +252,7 @@ Class TestSuite Extends Assert
 			End
 		Next
 	End Method
+	
 	
 		
 	'summary: Adds a unittest function to specified instance.
