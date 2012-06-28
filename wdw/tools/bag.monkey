@@ -32,14 +32,14 @@ Class Bag < T > Implements ImmutableBag
 	
 		
 	'summary: Returns the number of element slots in the bag.
-	Method GetCapacity:Int()
+	Method Capacity:Int() Property
 		Return _arr.Length()
 	End
 	
 	
 	
 	'summary: Returns the number of elements in the bag.
-	Method GetSize:Int()
+	Method Size:Int() Property
 		Return _currentSlot
 	End
 	
