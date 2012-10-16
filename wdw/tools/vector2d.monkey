@@ -1,5 +1,4 @@
 
-
 '2d vector class.
 
 Strict
@@ -179,9 +178,7 @@ Class Vector2D
 		_x = qx + v.x
 		_y = qy + v.y		
 	End
-	
-	
-	
+		
 	'summary: returns a string describing the vector values.	
 	Method toString:String()
 		Return "" + _x + "," + _y

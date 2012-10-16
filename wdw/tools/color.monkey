@@ -30,7 +30,6 @@ Class Color
 		_b = blue
 		_a = alpha
 	End
-
 		
 	
 	'summary: Sets all components.
@@ -73,8 +72,7 @@ Class Color
     Method a:Void(alpha:Float) Property
         _a = alpha
     End
-	
-    
+	    
 	
 	'summary: Uses the color and alpha values.
 	Method Use:Void()
@@ -82,5 +80,4 @@ Class Color
 		SetAlpha(_a)
 	End
 	
-
 End

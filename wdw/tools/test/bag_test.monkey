@@ -7,11 +7,10 @@ Import wdw.unittest
 Import wdw.tools.bag
 
 
-
 Class BagTest Extends Test
 	
-	Field b:Bag < Dummy >
-	
+	Field b:Bag<Dummy>
+		
 	
 	Method doBefore:Void()
 		b = New Bag<Dummy>
@@ -24,9 +23,9 @@ Class BagTest Extends Test
 	
 	
 	Method ConstructorTest:Void()
-		assertEquals(0, b.GetSize(), "")
+		assertEquals(0, b.Size(), "")
 		assertTrue(b.IsEmpty(), "")
-		assertEquals(16, b.GetCapacity(), "")
+		assertEquals(16, b.Capacity(), "")
 	End
 	
 	
@@ -75,7 +74,7 @@ Class BagTest Extends Test
 		b.Add(o)
 		b.Add(o)
 		b.Add(o)
-		assertEquals(4, b.GetSize(), "")
+		assertEquals(4, b.Size(), "")
 		
 		b.Clear()
 		assertTrue(b.IsEmpty(), "not empty")

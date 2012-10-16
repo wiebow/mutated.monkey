@@ -1,17 +1,13 @@
 
 Strict
 
-Import immutablebag
-
-
 
 'summary: Unsorted, fast collection of objects.
-Class Bag < T > Implements ImmutableBag
+Class Bag<T>
 
 	Private
 	
 	Field _arr:T[16]
-	
 	
 	
 	#rem
@@ -21,44 +17,38 @@ Class Bag < T > Implements ImmutableBag
 	Field _currentSlot:Int = 0
 	
 	Public
-	
-	
+		
 
 	'summary: Creates and empty bag with specified capacity.	
 	Method New(capacity:Int)
 		_arr = New T[capacity]
 	End
-	
-	
+		
 		
 	'summary: Returns the number of element slots in the bag.
 	Method Capacity:Int() Property
 		Return _arr.Length()
 	End
 	
-	
-	
+		
 	'summary: Returns the number of elements in the bag.
 	Method Size:Int() Property
 		Return _currentSlot
 	End
-	
-	
+		
 	
 	'summary: Returns true if the bag contains no elements.
 	Method IsEmpty:Bool()
 		Return _currentSlot = 0
 	End
-	
-	
+		
 	
 	'summary: Expands the bag size.
 	Method Grow:Void(newSize:Int = 0)
 		If newSize = 0 Then newSize = (_arr.Length() * 3) / 2 + 1
 		_arr = _arr[..newSize]
 	End
-	
-	
+		
 	
 	'summary: Adds specified object to end of this bag.
 	Method Add:Void(o:T)
@@ -70,8 +60,7 @@ Class Bag < T > Implements ImmutableBag
 		_currentSlot += 1
 	End
     
-    
-    
+        
 	'summary: Set element at specified index in the bag.
 	Method Set:Void(index:Int, o:T)
 		If index >= _arr.Length()
@@ -83,8 +72,7 @@ Class Bag < T > Implements ImmutableBag
 		_arr[index] = o
 	End Method
 	
-	
-	
+		
 	'summary: Returns true if specified object is in the bag.
 	Method Contains:Bool(o:T)
 		For Local i := 0 to _currentSlot - 1
@@ -93,15 +81,13 @@ Class Bag < T > Implements ImmutableBag
 		Return False
 	End
 
-	
-	
+		
 	'summary: Returns item at specified index.
 	Method Get:T(index:Int)
 		If index < 0 or index > _arr.Length() Then Return Null
 		Return _arr[index]
 	End
-	
-	
+		
 	
 	'summary: Removes object from bag by index.
 	Method RemoveByIndex:T(index:Int)
@@ -112,8 +98,7 @@ Class Bag < T > Implements ImmutableBag
 		_currentSlot -= 1
 		Return o
 	End
-	
-	
+		
 	
 	'summary: Removes and returns the last item in the bag.
 	Method RemoveLast:T()
@@ -125,8 +110,7 @@ Class Bag < T > Implements ImmutableBag
 		End
 		Return Null
 	End
-	
-	
+		
 	
 	'summary: Removes the first occurance of the specified element.
 	Method Remove:Bool(o:T)
@@ -138,15 +122,14 @@ Class Bag < T > Implements ImmutableBag
 		End
 		Return False
 	End
-	
-	
+		
 	
 	'summary: Removes from this bag all of its elements that are contained in the specified bag.
 	Method RemoveAllFrom:Bool(b2:Bag)
 		Local modified:Bool = False
 		
-		For Local index2:Int = 0 To b2.GetSize() - 1
-			For Local index:Int = 0 to Self.GetSize() - 1
+		For Local index2:Int = 0 To b2.Size() -1
+			For Local index:Int = 0 To Self.Size() -1
 				If b2._arr[index2] = _arr[index]
 					RemoveByIndex(index)
 					modified = True
@@ -157,8 +140,7 @@ Class Bag < T > Implements ImmutableBag
 		Next
 		Return modified
 	End
-	
-	
+		
 	
 	'summary: Removes all elements from this bag.
 	Method Clear:Void()
@@ -167,12 +149,11 @@ Class Bag < T > Implements ImmutableBag
 		End
 		_currentSlot = 0
 	End
-	
-	
+		
 	
 	'summary: Add all items from specified bag to this bag.
 	Method AddAllFrom:Void(b2:Bag)
-		For Local i:Int = 0 to b2.GetSize() - 1
+		For Local i:Int = 0 To b2.Size() -1
 			Self.Add(b2.Get(i))
 		End		
 	End
