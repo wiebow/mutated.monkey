@@ -21,12 +21,13 @@
 #end
 
 #rem
-	Unit test module for Monkey, 1.60 and up. Based on MaxUnit.
+	Unit test module for Monkey .66 and up. Based on MaxUnit.
 	
-	Version: 1.1	
+	Version: 1.2	
 	History:
 	1.0 - first release
 	1.1 - added exception handling and better output, fixed several small bugs
+	1.2 - made changes for new refection filter options (monkey .66). Removed docs not interesting for user.
 	
 #END
 

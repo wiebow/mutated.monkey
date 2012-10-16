@@ -1,6 +1,8 @@
 
 Strict
 
+#REFLECTION_FILTER+="reflection|wdw.unittest*"
+
 Import reflection
 Import testfunction
 Import assert
@@ -22,30 +24,28 @@ Class Test Extends Assert
 	Field startTime:Int
 	Field endTime:int
 
-
-	'summary: Unit tests for this test class.
+	'Unit tests for this test class.
 	Field tests:= New List<TestFunction>
 	
-	'summary: Current unit test.
+	'Current unit test.
 	Field currentTest:TestFunction
 	
-	'summary: Failed unit tests.
+	'Failed unit tests.
 '	Field failedTests:= New List<TestFunction>
 	
-	'summary: Current unit test counter.
+	'Current unit test counter.
 	Field testCount:Int = 0
 	
-	'summary: Method to run before each unit test.
+	'Method to run before each unit test.
 	Field before:MethodInfo
 	
-	'summary: Method to run after each unit test.
+	'Method to run after each unit test.
 	Field after:MethodInfo
 	
-	'summary: Method to run when starting tests for this class.
+	'Method to run when starting tests for this class.
 	Field beforeClass:MethodInfo
 	
-	'summary: Method to run when ending tests for this class.
+	' Method to run when ending tests for this class.
 	Field afterClass:MethodInfo
-
 	
 End

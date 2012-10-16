@@ -17,24 +17,22 @@ Class TestSuite Extends Assert
 	Field isError:Bool
 	Field isFail:Bool
 
-	'summary: instances of derived test classes go here.
-	Field tests:= New List <Object>
-	
-	Field errors:= new List <TestFunction>
-	Field failures:= New List <TestFunction>
+	'instances of derived test classes go here.
+	Field tests:= New List<Object>
+		
+	Field errors:= New List<TestFunction>
+	Field failures:= New List<TestFunction>
 	
 	Field testCount:Int
 		
-	'summary: the current unit test.
+	'the current unit test.
 	Field currentTest:TestFunction
 
-	
-	
+		
 	#Rem
 	summary: Runs the suite of tests.
 	#end
 	Method Run:Void()
-	
 		AddTests()
 		
 		Local message:String = "Starting testsuite containing " + (tests.Count()-1) + " test"
@@ -65,7 +63,6 @@ Class TestSuite Extends Assert
 			
 		Next
 		
-
 		'lets print the summary.
 		Local f:Int = failures.Count()
 		Local e:Int = errors.Count()
@@ -117,13 +114,11 @@ Class TestSuite Extends Assert
 			If tests.Count() > 1 Then formatted += "s)" Else formatted += ")"
 			Print(formatted)			
 		End If
-		
-	
+			
 	End Method
 	
 	
-	
-	'summary: Runs the specified test function.
+	'Runs the specified test function.
 	Method PerformTest:Void(t:TestFunction, first:Int, last:Int)
 		
 		isFail = False
@@ -202,10 +197,9 @@ Class TestSuite Extends Assert
 		End If
 
 	End Method
+		
 	
-	
-	
-	'summary: Adds all classes derived from Test to the suite.
+	'Adds all classes derived from Test to the suite.
 	Method AddTests:Void()
 	
 		For Local cl:= eachin GetClasses()
@@ -253,9 +247,8 @@ Class TestSuite Extends Assert
 		Next
 	End Method
 	
-	
 		
-	'summary: Adds a unittest function to specified instance.
+	'Adds a unittest function to specified instance.
 	Method Add:TestFunction(instance:Object, f:MethodInfo )
 		Local t := New TestFunction
 		t.name = "" + GetClass(instance).Name() + "." + f.Name()

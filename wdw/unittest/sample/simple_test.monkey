@@ -1,11 +1,11 @@
 
 Strict
 
-'set reflection filter.
-'using *_test will add all files using that suffix
-#REFLECTION_FILTER="*_test|reflection|wdw.unittest*"
-
 Import wdw.unittest
+
+'add this file to the reflection filter
+'so class MyClassTest can be reflected.
+#REFLECTION_FILTER+="simple_test"
 
 
 Function Main:Int()
@@ -48,7 +48,7 @@ Class MyClassTest Extends Test
 	Method BoolTest:Void()
 		m.simplebool = True		
 		assertTrue(m.simplebool, "")
-		assertFalse(m.simplebool, "this will fail")		
+		assertFalse(m.simplebool, "this will fail")
 	End Method
 	
 	
@@ -72,7 +72,7 @@ Class MyClassTest Extends Test
 	Method NotSameTest:Void()
 		Local m2:MyClass = New MyClass
 		assertNotSame(m2, m, "")
-		assertSame(m2, m, "this will fail")	
+		assertSame(m2, m, "this will fail")
 	End Method
 		
 End
