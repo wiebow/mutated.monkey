@@ -10,9 +10,8 @@ Const STATE_PLAYSTATE:Int = 1
 Const STATE_ENDSTATE:Int = 2
 
 
-
 Function Main:Int()
-	Local g:StateBasedGame = New StateBasedGame
+	Local g:Game = New Game
 	g.Title = "State Test"
 	g.AddGameState(New TitleState, STATE_TITLESTATE)
 	g.AddGameState(New PlayState, STATE_PLAYSTATE)
@@ -23,12 +22,10 @@ Function Main:Int()
 End
 
 
-
 Class TitleState Extends State
 
 	Method Render:Void()
 		Cls(255, 255, 255)
-		
 		SetColor(0, 255, 0)
 		SetAlpha(1.0)
 		DrawText("This is the title screen", 0, 0)
@@ -51,6 +48,7 @@ Class TitleState Extends State
 	Method Leave:Void()
 	End Method
 End
+
 
 Class PlayState Extends State
 
@@ -93,6 +91,7 @@ Class PlayState Extends State
 	Method Leave:Void()
 	End Method
 End
+
 
 Class EndState Extends State
 
