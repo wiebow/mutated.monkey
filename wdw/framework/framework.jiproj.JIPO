@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<JiProjUserOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<JiProjUserOptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Files>
     <DocUserOptions Filename=".\state\transition\emptytransition.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="0">
       <CursorPos>
@@ -8,10 +8,10 @@
       </CursorPos>
       <DocGUID />
     </DocUserOptions>
-    <DocUserOptions Filename=".\state\transition\fadeintransition.monkey" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="155">
+    <DocUserOptions Filename=".\state\transition\fadeintransition.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="155">
       <CursorPos>
-        <X>22</X>
-        <Y>4</Y>
+        <X>0</X>
+        <Y>5</Y>
       </CursorPos>
       <OutLiningSerialization>
         <Folding_Nodes_Collection>
@@ -227,8 +227,7 @@
           <Expanded>true</Expanded>
         </Folding_Nodes_Collection>
       </OutLiningSplitSerialization>
-      <DocGUID>da358c90-a205-4761-ae97-66c3d7f24eb4</DocGUID>
-      <Bookmarks />
+      <DocGUID />
     </DocUserOptions>
     <DocUserOptions Filename=".\state\transition\fadeouttransition.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="0">
       <CursorPos>
@@ -237,10 +236,10 @@
       </CursorPos>
       <DocGUID />
     </DocUserOptions>
-    <DocUserOptions Filename=".\state\transition\transition.monkey" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="155">
+    <DocUserOptions Filename=".\state\transition\transition.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="155">
       <CursorPos>
         <X>1</X>
-        <Y>7</Y>
+        <Y>5</Y>
       </CursorPos>
       <OutLiningSerialization>
         <Folding_Nodes_Collection>
@@ -276,8 +275,7 @@
           <Expanded>true</Expanded>
         </Folding_Nodes_Collection>
       </OutLiningSplitSerialization>
-      <DocGUID>249712c6-98c8-4c28-9164-638d39e41d49</DocGUID>
-      <Bookmarks />
+      <DocGUID />
     </DocUserOptions>
     <DocUserOptions Filename=".\state\state.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="155">
       <CursorPos>
@@ -443,7 +441,7 @@
     <DocUserOptions Filename=".\test\simple_game.monkey" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="155">
       <CursorPos>
         <X>0</X>
-        <Y>11</Y>
+        <Y>22</Y>
       </CursorPos>
       <OutLiningSerialization>
         <Folding_Nodes_Collection>
@@ -564,7 +562,7 @@
             <Y>52</Y>
           </StartPoint>
           <Text>...</Text>
-          <Expanded>false</Expanded>
+          <Expanded>true</Expanded>
         </Folding_Nodes_Collection>
         <Folding_Nodes_Collection>
           <Collapsed_Text>...</Collapsed_Text>
@@ -2439,5 +2437,53 @@
     <FolderStatus NodePath="framework\state" Expanded="true" />
     <FolderStatus NodePath="framework\state\transition" Expanded="true" />
     <FolderStatus NodePath="framework\test" Expanded="true" />
+    <FolderStatus NodePath="framework\test\simple_game.build" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\assets" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\assets\monkey" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\bin" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\bin\classes" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\bin\classes\com" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\bin\classes\com\monkey" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\bin\res" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\bin\res\drawable-hdpi" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\bin\res\drawable-ldpi" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\bin\res\drawable-mdpi" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\gen" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\gen\com" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\gen\com\monkey" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\libs" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\jni" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\libs" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\libs\armeabi" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\libs\armeabi-v7a" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\libs\x86" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\armeabi" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\armeabi\objs" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\armeabi\objs\nativegl" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\armeabi-v7a" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\armeabi-v7a\objs" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\armeabi-v7a\objs\nativegl" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\x86" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\x86\objs" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\nativegl\obj\local\x86\objs\nativegl" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\res" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\res\drawable-hdpi" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\res\drawable-ldpi" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\res\drawable-mdpi" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\res\layout" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\res\values" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\src" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\src\com" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\src\com\monkey" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\templates" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\templates\res" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\templates\res\layout" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\templates\src" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\templates\src\com" Expanded="false" />
+    <FolderStatus NodePath="framework\test\simple_game.build\android\templates\src\com\monkey" Expanded="false" />
   </Folders>
 </JiProjUserOptions>
