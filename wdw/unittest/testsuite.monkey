@@ -35,9 +35,11 @@ Class TestSuite Extends Assert
 	Method Run:Void()
 		AddTests()
 		
-		Local message:String = "Starting testsuite containing " + (tests.Count()-1) + " test"
-		If tests.Count()-1 > 1 Then message+="s"
+		Local message:String = "Starting testsuite containing " + (tests.Count() -1) + " test"
+		If tests.Count() -1 > 1 Then message += "s"
 		Print(message)
+		
+		Local count:Int = 1
 		
 		For Local testClass := EachIn tests
 			
@@ -46,7 +48,7 @@ Class TestSuite Extends Assert
 			If Not thisClass Then Error("Error: No class")
 
 			Local size:Int = thisClass.tests.Count()
-			Local count:Int = 1
+	'		Local count:Int = 1
 			Local first:Bool = False
 			Local last:Bool = False
 			
@@ -107,10 +109,10 @@ Class TestSuite Extends Assert
 			End If
 			
 			Print("~nFAILURES!!")
-			Print("Tests run: " + tests.Count() + ", failures: " + f + ", errors: " + e)
+			Print("Classes: " + (tests.Count() -1) + ", unit tests: " + (count - 1) + ", failures: " + f + ", errors: " + e)
 			
 		Else
-			Local formatted:String = "OK (" + tests.Count() + " test"
+			Local formatted:String = "OK (" + (tests.Count() -1) + " test"
 			If tests.Count() > 1 Then formatted += "s)" Else formatted += ")"
 			Print(formatted)			
 		End If
@@ -202,11 +204,11 @@ Class TestSuite Extends Assert
 	'Adds all classes derived from Test to the suite.
 	Method AddTests:Void()
 	
-		For Local cl:= eachin GetClasses()
+		For Local cl:= EachIn GetClasses()
 		
 			'weed out the non test classes
 			If Not cl.Name().EndsWith("Test") Then Continue
-
+			
 			If cl.ExtendsClass(GetClass("Test"))
 
 				'create instance of this class and add it to the tests list				
@@ -224,7 +226,7 @@ Class TestSuite Extends Assert
 					End
 
 					If me.Name().EndsWith("Before")
-						Local f:FieldInfo = cl.GetField("before")						
+						Local f:FieldInfo = cl.GetField("before")
 						f.SetValue(o, me)
 					End
 					
@@ -241,7 +243,7 @@ Class TestSuite Extends Assert
 					If me.Name().EndsWith("AfterClass")
 						Local f:FieldInfo = cl.GetField("afterclass")
 						f.SetValue(o, me)
-					End		
+					End
 				Next
 			End
 		Next
