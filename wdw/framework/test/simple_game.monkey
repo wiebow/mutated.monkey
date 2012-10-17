@@ -5,21 +5,31 @@ Strict
 
 Import wdw.framework
 
+
 Const STATE_TITLESTATE:Int = 0
 Const STATE_PLAYSTATE:Int = 1
 Const STATE_ENDSTATE:Int = 2
 
 
 Function Main:Int()
-	Local g:Game = New Game
+	Local g:MyGame = New MyGame
 	g.Title = "State Test"
 	g.AddGameState(New TitleState, STATE_TITLESTATE)
 	g.AddGameState(New PlayState, STATE_PLAYSTATE)
 	g.AddGameState(New EndState, STATE_ENDSTATE)
-
+	
 	Local e:Engine = New Engine(g, 60)
 	Return 0
 End
+
+
+Class MyGame Extends Game
+
+	Method Init:Void()		
+		Resources.StoreImage("mypic", LoadImage("objects.png", 7))
+	End
+End
+
 
 
 Class TitleState Extends State
@@ -30,6 +40,9 @@ Class TitleState Extends State
 		SetAlpha(1.0)
 		DrawText("This is the title screen", 0, 0)
 		DrawText("Press SPACE to start", 0, 20)
+		
+		DrawImage(Resources.GetImage("mypic"), 100, 100, 0)
+		
 	End Method
 	
 	
@@ -43,6 +56,8 @@ Class TitleState Extends State
 	
 	
 	Method Enter:Void()
+	
+		
 	End Method
 
 	Method Leave:Void()
