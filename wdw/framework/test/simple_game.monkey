@@ -35,7 +35,7 @@ Class TitleState Extends State
 	
 	
 	Method Update:Void()
-		If KeyHit(KEY_SPACE)
+		If TouchHit()
 			Game.EnterState(STATE_PLAYSTATE, New FadeInTransition, New FadeOutTransition)
 		End If
 	End Method
@@ -72,7 +72,7 @@ Class PlayState Extends State
 	
 	
 	Method Update:Void()
-		If KeyHit(KEY_SPACE)
+		If TouchHit()
 			Game.EnterState(STATE_ENDSTATE, New FadeInTransition, New FadeOutTransition)
 		End If
 		
@@ -101,19 +101,16 @@ Class EndState Extends State
 		SetAlpha(1.0)
 		DrawText("This is the last screen", 0, 0)
 	End Method
-	
-	
+		
 	
 	Method Update:Void()
-		If KeyHit(KEY_SPACE)
-'			_game.RequestStop()
-		End If
+		If TouchHit() Then Game.CloseRequested = True
 	End Method
-	
-	
+		
 	
 	Method Enter:Void()
 	End Method
+	
 	
 	Method Leave:Void()
 	End Method
