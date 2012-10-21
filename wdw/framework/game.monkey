@@ -1,9 +1,11 @@
 
 Strict
 
+Import mojo
 Import wdw.tools.bag
 Import state
 Import state.transition.emptytransition
+Import resources
 
 
 'summary: A state based game, with transitions.
@@ -35,7 +37,10 @@ Class Game
 	Public
 	
 	
-	'Called when the game is created. Override this if needed.
+	#rem
+	summary: User hook to perform game startup logic.
+	Called when the game is started.
+	#end
 	Method Init:Void()
 	End
 	
